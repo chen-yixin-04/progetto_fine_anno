@@ -5,7 +5,7 @@ import pandas as pd
 mydb = mysql.connector.connect(
   host="localhost",
   user="root",
-  password=""
+  password="",
   database="CLASSIFICA_ANIMALI_ZOO"
 )
 mycursor = mydb.cursor()
@@ -13,11 +13,13 @@ mycursor = mydb.cursor()
 #Create the DB (if not already exists)
 mycursor.execute("CREATE DATABASE IF NOT EXISTS CLASSIFICA_ANIMALI_ZOO")
 
+mycursor.execute("DROP TABLE IF  EXISTS CLASSIFICA_ANIMALI_ZOO.Animali")
+
 #Create the table for the csv data (if not exists)
 mycursor.execute("""
   CREATE TABLE IF NOT EXISTS CLASSIFICA_ANIMALI_ZOO.Animali (
     animal_name VARCHAR(30) NOT NULL,
-    hair Boolean,
+    hair Boolean ,
     feathers Boolean,
     eggs Boolean,
     milk Boolean,
@@ -29,12 +31,12 @@ mycursor.execute("""
     breathes Boolean,
     venomous Boolean,
     fins Boolean,
-    legs Numeric,
+    legs Integer,
     tail Boolean,
     domestic Boolean,
     catsize Boolean,
-    class_type Numeric,
-    PRIMARY KEY (animal_name)
+    class_type Integer
+    
   );""")
 
 #Delete data from the table Clsh_Unit
@@ -51,7 +53,7 @@ print(Animali_data.head(20))
 for i,row in Animali_data.iterrows():
     cursor = mydb.cursor()
     #here %S means string values 
-    sql = "INSERT INTO CLASSIFICA_ANIMALI_ZOO.Animali VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s%s,%s,%s,%s,%s,%s,%s,%s)"
+    sql = "INSERT INTO CLASSIFICA_ANIMALI_ZOO.Animali VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
     cursor.execute(sql, tuple(row))
     print("Record inserted")
     # the connection is not auto committed by default, so we must commit to save our changes
