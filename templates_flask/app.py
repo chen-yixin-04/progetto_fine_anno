@@ -13,13 +13,13 @@ mycursor = mydb.cursor()
 app = Flask(__name__)
 
 @app.route('/')
-def pilotiList():
+def animaliList():
         mycursor.execute("SELECT * FROM Animali")
         myresult = mycursor.fetchall()
         return render_template('aniamli.html', surename=myresult)
 
-@app.route('/units')
-def pilotiList():
+@app.route('/predator')
+def predatorList():
         mycursor.execute("SELECT * FROM Animali")
         myresult = mycursor.fetchall()
-        return render_template('aniamli.html', surename=myresult)
+        return render_template('aniamli.html', predator=myresult)
