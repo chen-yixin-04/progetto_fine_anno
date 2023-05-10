@@ -5,8 +5,7 @@ import pandas as pd
 mydb = mysql.connector.connect(
   host="localhost",
   user="root",
-  password="",
-  database="CLASSIFICA_ANIMALI_ZOO"
+  password=""
 )
 mycursor = mydb.cursor()
 
