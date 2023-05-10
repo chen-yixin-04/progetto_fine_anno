@@ -4,13 +4,27 @@
     <title>Classifica degli animali dello zoo</title>
 </head>
 <body>
-    <img src="../static/images/logof1.jpg" alt="Cognomi piloti" width="400">
-    {{surname}}
-    {% for item in surename %}
+    <img src="../static/immagini/zoo.jpg" alt="zoo" width="500">
+   
+    {% for animali in surename %}
         <p>
-            surename piloti: {{ item[5] }}
+            Nome: {{animali[0]}}
         </p>
-        <img src="../static/images/{{item[0]}}.jpg" alt="{{item[5]}}" width="400">
+        <p>
+            Ovipari: {{animali[3] }}
+        </p>
+        <p>
+            Lattazione: {{animali[4] }}
+        </p>
+        <img src="../static/immagini/{{animali[0]}}" width="500">
+
+
+
+
+       
     {% endfor %}
+
+
+   
 </body>
 </html>
