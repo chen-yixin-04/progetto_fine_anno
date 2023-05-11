@@ -2,9 +2,14 @@
 <html lang="en">
 <head>
     <title>Classifica degli animali dello zoo</title>
+    <link rel="stylesheet"
+    href="../static/css/style.css" />
 </head>
 <body>
+
+    
     <img src="../static/immagini/zoo.jpg" alt="zoo" width="500">
+    <hr>
    
     {% for animali in surename %}
         <p>
@@ -16,7 +21,7 @@
         <p>
             Lattazione: {{animali[4]}}
         </p>
-        <img src="../static/immagini/{{animali[0]}}" alt="{{item[0]}}" width="500">
+        <img src="../static/immagini/{{animali[0]}}.jpg" alt="{{animali[0]}}" width="500">
 
 
 
