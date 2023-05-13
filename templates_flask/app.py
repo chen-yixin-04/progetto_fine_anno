@@ -14,7 +14,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def animaliList():
-        mycursor.execute("SELECT animal_name, hair, feathers, eggs,milk FROM Animali Limit 10")
+        mycursor.execute("SELECT id, animal_name, hair, feathers, eggs,milk FROM Animali Limit 15")
         myresult = mycursor.fetchall()
         return render_template('animali.html', surename=myresult)
 
