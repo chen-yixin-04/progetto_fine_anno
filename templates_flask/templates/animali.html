@@ -6,20 +6,43 @@
     href="../static/css/style.css" />
 </head>
 <body>
-
+<header> <h1>15 animali più poplari dello zoo  </h1></header>
     
     <img src="../static/immagini/zoo.jpg" alt="zoo" width="500">
-    <hr>
+    
+
+    <ol>
+        <li class="aquatic">penguin</li>
+        <li class="domestic">giraffe</li>
+        <li class="domestic">goat</li>
+        <li class="predator">lion</li>
+        <li class="domestic">elephant</li>
+        <li class="predator">gorilla</li>
+        <li class="predator">cheetah</li>
+        <li class="toothed">panda</li>
+        <li class="aquatic">dolphin</li>
+        <li class="predator">alligator</li>
+        <li class="domestic">zebra</li>
+        <li class="aquatic">flamingo</li>
+        <li class="predator">bear</li>
+        <li class="airborne">fruitbat</li>
+        <li class="aquatic">platypus</li>
+      </ol>
+<hr>
    
     {% for animali in surename %}
+       
         <p>
-            Nome: {{animali[0]}}
+            Nome: {{animali[1]}}
         </p>
         <p>
-            Ovipari: {{animali[3] }}
+            Ovipari: {{animali[4] }}
         </p>
         <p>
-            Lattazione: {{animali[4]}}
+            Lattazione: {{animali[5]}}
+        </p>
+        <p>
+            Classe: {{animali[18]}}
         </p>
         <img src="../static/immagini/{{animali[0]}}.jpg" alt="{{animali[0]}}" width="500">
 
