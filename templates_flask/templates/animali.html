@@ -1,58 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Classifica degli animali dello zoo</title>
-    <link rel="stylesheet"
-    href="../static/css/style.css" />
+    <link rel="stylesheet" href="../static/css/style.css" />
 </head>
+
 <body>
-<header> <h1>15 animali più poplari dello zoo  </h1></header>
-    
+    <header>
+        <h1>15 animali più poplari dello zoo </h1>
+    </header>
+
     <img src="../static/immagini/zoo.jpg" alt="zoo" width="500">
-    
+
 
     <ol>
-        <li class="aquatic">penguin</li>
-        <li class="domestic">giraffe</li>
-        <li class="domestic">goat</li>
-        <li class="predator">lion</li>
-        <li class="domestic">elephant</li>
-        <li class="predator">gorilla</li>
-        <li class="predator">cheetah</li>
-        <li class="toothed">panda</li>
-        <li class="aquatic">dolphin</li>
-        <li class="predator">alligator</li>
-        <li class="domestic">zebra</li>
-        <li class="aquatic">flamingo</li>
-        <li class="predator">bear</li>
-        <li class="airborne">fruitbat</li>
-        <li class="aquatic">platypus</li>
-      </ol>
-<hr>
-   
-    {% for animali in surename %}
-       
-        <p>
-            Nome: {{animali[1]}}
-        </p>
-        <p>
-            Ovipari: {{animali[4] }}
-        </p>
-        <p>
-            Lattazione: {{animali[5]}}
-        </p>
-        <p>
-            Classe: {{animali[18]}}
-        </p>
-        <img src="../static/immagini/{{animali[0]}}.jpg" alt="{{animali[0]}}" width="500">
+        <li class="aquatic">Pinguino</li>
+        <li class="domestic">Giraffa</li>
+        <li class="domestic">Capra</li>
+        <li class="predator">Orso polare</li>
+        <li class="domestic">Leone</li>
+        <li class="predator">Tigre</li>
+        <li class="predator">Panda rosso</li>
+        <li class="toothed">Elefante</li>
+        <li class="aquatic">Gorilla</li>
+        <li class="predator">Panda</li>
+        <li class="domestic">Alligatore</li>
+        <li class="aquatic">Ghepardo</li>
+        <li class="predator">Delfino</li>
+        <li class="airborne">Fenicottero</li>
+        <li class="aquatic">Lontra</li>
+    </ol>
+    <hr>
+    <div class="container">
+        {% for animali in surename %}
+
+        <div class="riquadri">
+            <p>
+                Nome: {{animali[1]}}
+            </p>
+            <p>
+                Piume: {{animali[3]}}
+            </p>
+
+            <p>
+                Ovipari: {{animali[4] }}
+            </p>
+            <p>
+                Lattazione: {{animali[5]}}
+            </p>
 
 
+            <p>
+                Acquatici: {{animali[7]}}
+            </p>
+
+            <p>
+                Velenosi: {{animali[12]}}
+            </p>
+            <p>
+                Numero di zampe: {{animali[14]}}
+            </p>
+            <p>
+                Coda: {{animali[15]}}
+            </p>
+            <p>
+                Classe: {{animali[18]}}
+
+            </p>
+            <img src="../static/immagini/{{animali[0]}}.jpg" alt="{{animali[0]}}" width="500">
+        </div>
+
+        {% endfor %}
+
+    </div>
 
 
-       
-    {% endfor %}
-
-
-   
 </body>
+
 </html>
