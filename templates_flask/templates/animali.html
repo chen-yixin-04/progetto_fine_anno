@@ -3,15 +3,45 @@
 
 <head>
     <title>Classifica degli animali dello zoo</title>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li style="float:right"><a class="active" href="#about">About</a></li>
+      </ul>
     <link rel="stylesheet" href="../static/css/style.css" />
+    <style>
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          padding: 12px 16px;
+          z-index: 1;
+        }
+        
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+       
+
+        </style>
 </head>
 
 <body>
+    <div class="zoo">
     <header>
         <h1>15 animali più poplari dello zoo </h1>
     </header>
 
-    <img src="../static/immagini/zoo.jpg" alt="zoo" width="500">
+    <img src="../static/immagini/zoo.jpg" alt="zoo" width="500" >
+    </div>
 
 
     <ol>
@@ -36,6 +66,7 @@
         {% for animali in surename %}
 
         <div class="riquadri">
+            <img src="../static/immagini/{{animali[0]}}.jpg" alt="{{animali[0]}}" width="500">
             <p>
                 Nome: {{animali[1]}}
             </p>
@@ -68,7 +99,7 @@
                 Classe: {{animali[18]}}
 
             </p>
-            <img src="../static/immagini/{{animali[0]}}.jpg" alt="{{animali[0]}}" width="500">
+            
         </div>
 
         {% endfor %}

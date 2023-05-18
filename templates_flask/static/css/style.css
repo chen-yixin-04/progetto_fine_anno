@@ -3,18 +3,19 @@ img {
     width: 600px;
     height:400px;
     justify-content: center;
-    ;
+   
 }
 
 p { display:flex;
      justify-content: center;
-     color: brown;
+     color: rgb(255, 255, 255);
 
 }
 
 title {
     font-family: Arial;
     font-size: 30pt;
+    
 }
 
 
@@ -30,5 +31,22 @@ title {
    flex-direction:row;
    flex-flow: row wrap;
    margin: 10px;
+   background-color: black;
+   border-radius: 10%;
+
 }
   
+body{
+    
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(82, 255, 246, 0.849));
+  }
+
+h1{
+text-shadow: 2px 2px red;
+justify-content: center;
+}
+
+.zoo{
+    text-shadow: 2px 2px red;
+    justify-content: center;
+    }
