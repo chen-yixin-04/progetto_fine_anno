@@ -3,12 +3,7 @@
 
 <head>
     <title>Classifica degli animali dello zoo</title>
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li style="float:right"><a class="active" href="#about">About</a></li>
-      </ul>
+    
     <link rel="stylesheet" href="../static/css/style.css" />
     <style>
         .dropdown {
@@ -43,25 +38,26 @@
     <img src="../static/immagini/zoo.jpg" alt="zoo" width="500" >
     </div>
 
-
     <ol>
-        <li class="aquatic">Pinguino</li>
-        <li class="domestic">Giraffa</li>
-        <li class="domestic">Capra</li>
-        <li class="predator">Orso polare</li>
-        <li class="domestic">Leone</li>
-        <li class="predator">Tigre</li>
-        <li class="predator">Panda rosso</li>
-        <li class="toothed">Elefante</li>
-        <li class="aquatic">Gorilla</li>
-        <li class="predator">Panda</li>
-        <li class="domestic">Alligatore</li>
-        <li class="aquatic">Ghepardo</li>
-        <li class="predator">Delfino</li>
-        <li class="airborne">Fenicottero</li>
-        <li class="aquatic">Lontra</li>
-    </ol>
+        <li class="aquatic"><a href="animali/pinguino.html">Pinguino</a></li>
+        <li class="domestic"><a href="animali/giraffa.html">Giraffa</a></li>
+        <li class="domestic"><a href="animali/capra.html">Capra</a></li>
+        <li class="predator"><a href="animali/orso_polare.html">Orso polare</a></li>
+        <li class="domestic"><a href="animali/leone.html">Leone</a></li>
+        <li class="predator"><a href="animali/tigre.html">Tigre</a></li>
+        <li class="predator"><a href="animali/panda_rosso.html">Panda rosso</a></li>
+        <li class="toothed"><a href="animali/elefante.html">Elefante</a></li>
+        <li class="aquatic"><a href="animali/gorilla.html">Gorilla</a></li>
+        <li class="predator"><a href="animali/panda.html">Panda</a></li>
+        <li class="domestic"><a href="animali/alligatore.html">Alligatore</a></li>
+        <li class="aquatic"><a href="animali/ghepardo.html">Ghepardo</a></li>
+        <li class="predator"><a href="animali/delfino.html">Delfino</a></li>
+        <li class="airborne"><a href="animali/fenicottero.html">Fenicottero</a></li>
+        <li class="aquatic"><a href="animali/lontra.html">Lontra</a></li>
+      </ol>
+    
     <hr>
+    
     <div class="container">
         {% for animali in surename %}
 
