@@ -1,6 +1,6 @@
 id,animal_name,hair,feathers,eggs,milk,airborne,aquatic,predator,toothed,backbone,breathes,venomous,fins,legs,tail,domestic,catsize,class_type
 1,Pinguino,vero,vero,vero,falso,falso,vero,vero,falso,vero,vero,falso,falso,2,vero,falso,vero,uccello
-2,Giraffe,vero,falso,falso,vero,falso,falso,falso,vero,vero,vero,falso,falso,4,vero,falso,vero,mammifero
+2,Giraffa,vero,falso,falso,vero,falso,falso,falso,vero,vero,vero,falso,falso,4,vero,falso,vero,mammifero
 3,Capra,vero,falso,falso,vero,falso,falso,falso,vero,vero,vero,falso,falso,4,vero,falso,falso,mammifero
 4,Orso polare,vero,falso,falso,vero,falso,falso,vero,vero,vero,vero,falso,falso,4,falso,vero,vero,mammifero
 5,Leone,vero,falso,falso,vero,falso,falso,vero,vero,vero,vero,falso,falso,4,vero,vero,vero,mammifero

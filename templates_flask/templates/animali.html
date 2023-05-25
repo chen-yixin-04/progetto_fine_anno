@@ -3,66 +3,74 @@
 
 <head>
     <title>Classifica degli animali dello zoo</title>
-    
+
     <link rel="stylesheet" href="../static/css/style.css" />
     <style>
         .dropdown {
-          position: relative;
-          display: inline-block;
+            position: relative;
+            display: inline-block;
         }
-        
-        .dropdown-content {
-          display: none;
-          position: absolute;
-          background-color: #f9f9f9;
-          min-width: 160px;
-          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-          padding: 12px 16px;
-          z-index: 1;
-        }
-        
-        .dropdown:hover .dropdown-content {
-          display: block;
-        }
-       
 
-        </style>
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            padding: 12px 16px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
     <div class="zoo">
-    <header>
-        <h1>15 animali più poplari dello zoo </h1>
-    </header>
+        <header>
+            <h1>15 animali più poplari dello zoo </h1>
+        </header>
 
-    <img src="../static/immagini/zoo.jpg" alt="zoo" width="500" >
+        <img src="../static/immagini/zoo.jpg" alt="zoo" width="500">
     </div>
 
     <ol>
-        <li class="aquatic"><a href="animali/pinguino.html">Pinguino</a></li>
-        <li class="domestic"><a href="animali/giraffa.html">Giraffa</a></li>
-        <li class="domestic"><a href="animali/capra.html">Capra</a></li>
-        <li class="predator"><a href="animali/orso_polare.html">Orso polare</a></li>
-        <li class="domestic"><a href="animali/leone.html">Leone</a></li>
-        <li class="predator"><a href="animali/tigre.html">Tigre</a></li>
-        <li class="predator"><a href="animali/panda_rosso.html">Panda rosso</a></li>
-        <li class="toothed"><a href="animali/elefante.html">Elefante</a></li>
-        <li class="aquatic"><a href="animali/gorilla.html">Gorilla</a></li>
-        <li class="predator"><a href="animali/panda.html">Panda</a></li>
-        <li class="domestic"><a href="animali/alligatore.html">Alligatore</a></li>
-        <li class="aquatic"><a href="animali/ghepardo.html">Ghepardo</a></li>
-        <li class="predator"><a href="animali/delfino.html">Delfino</a></li>
-        <li class="airborne"><a href="animali/fenicottero.html">Fenicottero</a></li>
-        <li class="aquatic"><a href="animali/lontra.html">Lontra</a></li>
-      </ol>
-    
+        <li class="aquatic"><a href="../static/animali/pinguino.html">Pinguino</a></li>
+        <li class="domestic"><a href="../static/animali/giraffa.html">Giraffa</a></li>
+        <li class="domestic"><a href="../static/animali/capra.html">Capra</a></li>
+        <li class="predator"><a href="../static/animali/orso_polare.html">Orso polare</a></li>
+        <li class="domestic"><a href="../static/animali/leone.html">Leone</a></li>
+        <li class="predator"><a href="../static/animali/tigre.html">Tigre</a></li>
+        <li class="predator"><a href="../static/animali/panda_rosso.html">Panda rosso</a></li>
+        <li class="toothed"><a href="../static/animali/elefante.html">Elefante</a></li>
+        <li class="aquatic"><a href="../static/animali/gorilla.html">Gorilla</a></li>
+        <li class="predator"><a href="../static/animali/panda.html">Panda</a></li>
+        <li class="domestic"><a href="../static/animali/alligatore.html">Alligatore</a></li>
+        <li class="aquatic"><a href="../static/animali/ghepardo.html">Ghepardo</a></li>
+        <li class="predator"><a href="../static/animali/delfino.html">Delfino</a></li>
+        <li class="airborne"><a href="../static/animali/fenicottero.html">Fenicottero</a></li>
+        <li class="aquatic"><a href="../static/animali/lontra.html">Lontra</a></li>
+    </ol>
+
     <hr>
-    
+
     <div class="container">
         {% for animali in surename %}
 
         <div class="riquadri">
-            <img src="../static/immagini/{{animali[0]}}.jpg" alt="{{animali[0]}}" width="500">
+            
+            <div class="dropdown">
+                <span> <a href="../static/animali/{{animali[1]}}.html">
+                    <img src="../static/immagini/{{animali[0]}}.jpg" alt="{{animali[0]}}" width="500">
+                </a></span>
+                <div class="dropdown-content">
+                <p>clicca sull'immagine per vedere altri dettagli</p>
+                </div>
+              </div>
+           
+            
             <p>
                 Nome: {{animali[1]}}
             </p>
@@ -95,7 +103,7 @@
                 Classe: {{animali[18]}}
 
             </p>
-            
+
         </div>
 
         {% endfor %}
