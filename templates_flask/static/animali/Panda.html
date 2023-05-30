@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Descrizione del Pinguino</title>
+  <link rel="stylesheet" href="../static/css/style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    
+    h1 {
+      color: #336699;
+      text-align: center;
+    }
+    
+    .gallery-container {
+      position: relative;
+      width: 100%;
+      overflow-x: scroll;
+      white-space: nowrap;
+    }
+    
+    .gallery {
+      display: inline-block;
+    }
+    
+    .gallery img {
+      display: inline-block;
+      width: 600px;
+      height: 400px;
+      margin-right: 10px;
+    }
+    
+    .scroll-arrow {
+      position: fixed;
+      top: 40%;
+      font-size: 35px;
+      color: #336699;
+      cursor: pointer;
+      background-color: white;
+      padding: 10px;
+      border-radius: 50%;
+      transition: opacity 0.3s;
+      z-index: 999;
+      border: 2px solid #336699; 
+      font-weight: bold;
+    }
+    
+    .scroll-arrow.left {
+      left: 10px;
+    }
+    
+    .scroll-arrow.right {
+      right: 10px;
+    }
+    
+    .scroll-arrow:hover {
+      opacity: 0.8;
+    }
+    
+    .hidden {
+      display: none;
+    }
+    
+    p {
+      padding-left: 50px;
+      padding-right: 50px;
+      line-height: 2;
+    }
+    
+    img {
+      border: 1px solid #919191;
+    }
+  </style>
+</head>
+<body>
+  <h1>I Pinguini</h1>
+  <p>Con i suoi 115 cm di altezza è il più grande dei pinguini oggi viventi, simbolo indiscusso dell’Antartide, dove vive sopportando freddissime temperature che possono raggiungere i -60°C. I cambiamenti climatici e la presenza dell'uomo minacciano la sua esistenza e il suo habitat.</p>
+
+  <div class="gallery-container">
+    <div class="scroll-arrow left hidden" onclick="scrollGallery('left')">&#8592;</div>
+    <div class="gallery">
+      <img src="https://static.ohga.it/wp-content/uploads/sites/24/2022/05/iStock-146729730.jpg" width="600" height="400">
+      <img src="https://www.pingusenglish.it/blog/wp-content/uploads/2023/04/giornata-mondiale-del-pinguino-e1682064643291.jpg" width="600">
+      <img src="https://www.nonsprecare.it/wp-content/uploads/2019/07/Cambiamenti-climatici-pinguini.jpg" width="600" height="400"> 
+      <img src="https://cdn.lifegate.it/4gaBv46IRzuWVh4kqAXRSpdEI6I=/768x/smart/https://www.lifegate.it/app/uploads/39528014421_893625d80f_k.jpg" width="600" height="400">
+      <img src="https://www.tempi.it/wp-content/uploads/2022/02/pinguini-ansa.jpg" width="600" height="400">
+    </div>
+    <div class="scroll-arrow right" onclick="scrollGallery('right')">&#8594;</div>
+  </div>
+
+  <p>I pinguini (ordine Sphenisciforme, famiglia Spheniscid) sono un gruppo di uccelli acquatici incapaci di volare. Vivono quasi esclusivamente nell'emisfero australe: solo una specie, il pinguino delle Galápagos, si trova a nord dell'Equatore. Altamente adattati alla vita nell'acqua, i pinguini hanno piumaggio scuro e bianco e pinne per nuotare. La maggior parte dei pinguini si nutre di krill, pesci, calamari e altre forme di vita marina che catturano con il becco e li inghiottono interi mentre nuotano. Un pinguino ha una lingua spinosa e mascelle potenti per afferrare prede scivolose. Trascorrono circa metà della loro vita sulla terraferma e l'altra metà in mare.</p>
+
+  <script>
+    function scrollGallery(direction) {
+      var galleryContainer = document.querySelector('.gallery-container');
+      var scrollAmount = 620; // Width of each image plus margin-right
+      var scrollPosition = galleryContainer.scrollLeft;
+      var maxScroll = galleryContainer.scrollWidth - galleryContainer.clientWidth;
+      
+      if (direction === 'left') {
+        galleryContainer.scrollLeft -= scrollAmount;
+        if (galleryContainer.scrollLeft <= 0) {
+          document.querySelector('.scroll-arrow.left').classList.add('hidden');
+        }
+        if (scrollPosition > 0 && scrollPosition <= maxScroll) {
+          document.querySelector('.scroll-arrow.right').classList.remove('hidden');
+        }
+      } else {
+        galleryContainer.scrollLeft += scrollAmount;
+        if (galleryContainer.scrollLeft > 0) {
+          document.querySelector('.scroll-arrow.left').classList.remove('hidden');
+        }
+        if (galleryContainer.scrollLeft >= maxScroll) {
+          document.querySelector('.scroll-arrow.right').classList.add('hidden');
+        }
+      }
+    }
+  </script>
+</body>
+</html>

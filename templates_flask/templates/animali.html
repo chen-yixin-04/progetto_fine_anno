@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <title>Classifica degli animali dello zoo</title>
 
+
     <link rel="stylesheet" href="../static/css/style.css" />
     
+   
 </head>
+
 
 <body>
     <div class="zoo">
@@ -14,8 +18,10 @@
             <h1>15 animali più poplari dello zoo </h1>
         </header>
 
+
         <img src="../static/immagini/zoo.jpg" alt="zoo" width="500">
     </div>
+
 
     <ol>
         <li class="aquatic"><a href="../static/animali/Pinguino.html">Pinguino</a></li>
@@ -35,72 +41,44 @@
         <li class="aquatic"><a href="../static/animali/Lontra.html">Lontra</a></li>
     </ol>
 
+
     <hr>
-    <style>
-        .tooltip {
-            position: relative;
-            display: inline-block;
-            border-bottom: 1px dotted black;
-        }
-    
-        .tooltip .tooltiptext {
-            visibility: hidden;
-            width: 120px;
-            background-color: rgb(255, 255, 255);
-            color: #1d1d1d;
-            text-align: center;
-            border-radius: 6px;
-            padding: 5px 0;
-            position: absolute;
-            z-index: 1;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-    
-        .tooltip .tooltiptext::after {
-            content: "";
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            margin-left: -5px;
-            border-width: 5px;
-            border-style: solid;
-            border-color: black transparent transparent transparent;
-        }
-    
-        .tooltip:hover .tooltiptext {
-            visibility: visible;
-        }
-    </style>
        
-        
+
 
     <div class="container">
         {% for animali in surename %}
 
+
         <div class="riquadri">
-            
+           
             <div>
                 <div class="tooltip">
                     <a href="../static/animali/{{animali[1]}}.html">
                     <img src="../static/immagini/{{animali[0]}}.jpg" alt="{{animali[0]}}" width="500"></a>
-                    <span class="tooltiptext">clicca per approfondire</span>
+                    
+            </div>
+            <div>
+                    <span class="tooltiptext">clicca sull'immagine per approfondire</span>
                 </div>
-                
-                
-                
+                <button class="vote-button" onclick="voteAnimal('{{animali[1]}}')">vota</button>
+               
+               
+               
                 </a>
-        
+       
         </div>
            
-            
+           <p>
+            Classifica: {{animali[0]}}
+           </p>
             <p>
                 Nome: {{animali[1]}}
             </p>
             <p>
                 Piume: {{animali[3]}}
             </p>
+
 
             <p>
                 Ovipari: {{animali[4] }}
@@ -110,9 +88,12 @@
             </p>
 
 
+
+
             <p>
                 Acquatici: {{animali[7]}}
             </p>
+
 
             <p>
                 Velenosi: {{animali[12]}}
@@ -126,15 +107,27 @@
             <p>
                 Classe: {{animali[18]}}
 
+
             </p>
+
 
         </div>
 
+
         {% endfor %}
 
+
     </div>
+    <script>
+        function voteAnimal(animalName) {
+            // Esegui qui le operazioni per registrare il voto dell'animale
+            console.log("Hai votato per: " + animalName);
+        }
+    </script>
+
 
 
 </body>
+
 
 </html>

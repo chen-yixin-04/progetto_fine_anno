@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Descrizione degli orsi polari</title>
+  <link rel="stylesheet" href="../static/css/style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    
+    h1 {
+      color: #336699;
+      text-align: center;
+    }
+    
+    .gallery-container {
+      position: relative;
+      width: 100%;
+      overflow-x: scroll;
+      white-space: nowrap;
+    }
+    
+    .gallery {
+      display: inline-block;
+    }
+    
+    .gallery img {
+      display: inline-block;
+      width: 600px;
+      height: 400px;
+      margin-right: 10px;
+    }
+    
+    .scroll-arrow {
+      position: fixed;
+      top: 40%;
+      font-size: 35px;
+      color: #336699;
+      cursor: pointer;
+      background-color: white;
+      padding: 10px;
+      border-radius: 50%;
+      transition: opacity 0.3s;
+      z-index: 999;
+      border: 2px solid #336699; 
+      font-weight: bold;
+    }
+    
+    .scroll-arrow.left {
+      left: 10px;
+    }
+    
+    .scroll-arrow.right {
+      right: 10px;
+    }
+    
+    .scroll-arrow:hover {
+      opacity: 0.8;
+    }
+    
+    .hidden {
+      display: none;
+    }
+    
+    p {
+      padding-left: 50px;
+      padding-right: 50px;
+      line-height: 2;
+    }
+    
+    img {
+      border: 1px solid #919191;
+    }
+  </style>
+</head>
+<body>
+  <h1>Gli Orsi Polari</h1>
+  <p>L'orso polare è un orso carnivoro la cui area nativa si trova in gran parte all'interno del circolo polare artico, che comprende l'Oceano Artico, i suoi mari circostanti e le masse terrestri circostanti.</p>
+
+  <div class="gallery-container">
+    <div class="scroll-arrow left hidden" onclick="scrollGallery('left')">&#8592;</div>
+    <div class="gallery">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Polar_Bear_with_its_tongue_sticking_out.jpg/800px-Polar_Bear_with_its_tongue_sticking_out.jpg" width="600" height="400">
+        <img src="https://www.gedistatic.it/content/gnn/img/ilsecoloxix/2021/12/28/211057195-e5d1944a-9bde-49c7-b356-4d91ac972434.jpg" width="600" height="400">
+        <img src="https://www.focusjunior.it/content/uploads/site_stored/imgs/0001/000/orsopolareinacqua.jpg" width="600" height="400">
+        <img src="https://static.ohga.it/wp-content/uploads/sites/24/2021/02/Orso-polare.jpg" width="600" height="400">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSww7OGGVs_akJjv7tf9NNzABkQAUXKNpI2GA&usqp=CAU" width="600" height="400">
+      </div>
+    <div class="scroll-arrow right" onclick="scrollGallery('right')">&#8594;</div>
+  </div>
+
+  <p> L'orso polare è il più grande carnivoro terrestre attualmente esistente ed è immediatamente riconoscibile dalla pelliccia bianca. Diversamente da altri mammiferi dell'Artide, in estate il suo manto non diventa più scuro. I peli non sono pigmentati di bianco, ma sono cavi e non pigmentati come i capelli bianchi negli esseri umani.
+
+    L'isolamento termico degli orsi polari è estremamente efficace contro il freddo, ma il loro corpo si surriscalda a temperature sopra i 10 °C. Il loro isolamento è così efficace che, se osservati con una videocamera a raggi infrarossi, sono a malapena visibili. Soltanto le zampe e il muso emanano un calore percepibile.
+    
+    Una caratteristica interessante della pelliccia è che, fotografata con luce ultravioletta, appare nera: ha quindi, come ulteriore meccanismo di "produzione" di energia termica, un'elevata capacità di assorbimento delle frequenze UV; ciò è possibile avendo l'epidermide nera.
+    
+    L'elevata concentrazione di retinolo rende il fegato dell'orso polare non commestibile e potenzialmente letale.</p>
+  <script>
+    function scrollGallery(direction) {
+      var galleryContainer = document.querySelector('.gallery-container');
+      var scrollAmount = 620; // Width of each image plus margin-right
+      var scrollPosition = galleryContainer.scrollLeft;
+      var maxScroll = galleryContainer.scrollWidth - galleryContainer.clientWidth;
+      
+      if (direction === 'left') {
+        galleryContainer.scrollLeft -= scrollAmount;
+        if (galleryContainer.scrollLeft <= 0) {
+          document.querySelector('.scroll-arrow.left').classList.add('hidden');
+        }
+        if (scrollPosition > 0 && scrollPosition <= maxScroll) {
+          document.querySelector('.scroll-arrow.right').classList.remove('hidden');
+        }
+      } else {
+        galleryContainer.scrollLeft += scrollAmount;
+        if (galleryContainer.scrollLeft > 0) {
+          document.querySelector('.scroll-arrow.left').classList.remove('hidden');
+        }
+        if (galleryContainer.scrollLeft >= maxScroll) {
+          document.querySelector('.scroll-arrow.right').classList.add('hidden');
+        }
+      }
+    }
+  </script>
+</body>
+</html>

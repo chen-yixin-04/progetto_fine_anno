@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Descrizione della Giraffa</title>
+    <link rel="stylesheet" href="../static/css/style.css" />
+  
+</head>
+<body>
+    <h1>Le Giraffe</h1>
+    <p>La giraffa è un genere di mammifero artiodattilo. Originaria dell'Africa, è il più alto animale terrestre, nonché il più grande ruminante esistente.</p>
+
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 20px;
+        }
+        
+        h1 {
+          color: #336699;
+          text-align: center;
+        }
+        
+        .gallery {
+          width: 100%;
+          overflow-x: scroll;
+          white-space: nowrap;
+        }
+        
+        .gallery img {
+          display: inline-block;
+          width: 600px;
+          height: 400px;
+          margin-right: 10px;
+        }
+        p {
+      padding-left: 50px;
+      padding-right: 50px;
+      line-height: 2;
+    }
+    img {
+      border: 1px solid #919191;}
+      </style>
+    </head>
+    <body>
+      
+      
+      <div class="gallery">
+        <img src="https://static.ohga.it/wp-content/uploads/sites/24/2021/08/iStock-933914464.jpg"  width="600" height="400">
+        <img src="https://www.ordineveterinaribenevento.it/wp-content/uploads/Giraffe.jpg" width="600">
+        <img src="https://www.africarivista.it/wp-content/uploads/2021/01/giraffe.jpg"  width="600" height="400"> 
+        <img src="https://www.czs.org/getattachment/Brookfield-ZOO/Zoo-Animals/Habitat-Africa!-The-Savannah/Reticulated-Giraffe/Reticulated-Giraffe_560x393.jpg.aspx" width="600" height="400">
+        <img src="https://www.focus.it/site_stored/imgs/0003/026/reu_rtx18iaa.1020x680.jpg"width="600" height="400">
+      </div>
+      
+      <script>
+        function scrollGallery() {
+          var gallery = document.querySelector('.gallery');
+          gallery.scrollLeft += 620; // Width of each image plus margin-right
+        }
+      </script>
+      
+      <button onclick="scrollGallery()">Scorri</button>
+      <div class="testo">
+      <p>Le principali caratteristiche distintive della giraffa sono il collo e le zampe estremamente lunghi, i suoi ossiconi simili a corna e il suo mantello maculato. È classificato sotto la famiglia Giraffidae, insieme al suo parente più prossimo esistente, l'okapi. Il suo areale sparso si estende dal Ciad a nord al Sud Africa a sud, e dal Niger a ovest fino alla Somalia a est. Le giraffe di solito abitano savane e boschi. La loro fonte di cibo sono foglie, frutti e fiori di piante legnose, principalmente specie di acacia, che brucano ad altezze che la maggior parte degli altri erbivori non può raggiungere.</p>
+    
+    </body>
+    
+   
+    
+    
+    
+    
+</body>
+</html>
