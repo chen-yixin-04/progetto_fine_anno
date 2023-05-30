@@ -23,7 +23,7 @@
     </div>
 
 
-    <ol>
+    <ol >
         <li class="aquatic"><a href="../static/animali/Pinguino.html">Pinguino</a></li>
         <li class="domestic"><a href="../static/animali/Giraffa.html">Giraffa</a></li>
         <li class="domestic"><a href="../static/animali/Capra.html">Capra</a></li>
@@ -48,26 +48,18 @@
 
     <div class="container">
         {% for animali in surename %}
-
-
         <div class="riquadri">
-           
             <div>
                 <div class="tooltip">
                     <a href="../static/animali/{{animali[1]}}.html">
-                    <img src="../static/immagini/{{animali[0]}}.jpg" alt="{{animali[0]}}" width="500"></a>
-                    
-            </div>
-            <div>
-                    <span class="tooltiptext">clicca sull'immagine per approfondire</span>
+                        <img src="../static/immagini/{{animali[0]}}.jpg" alt="{{animali[0]}}" width="500"></a>
+                </div>
+                <div>
+                    <span class="tooltiptext">Clicca sull'immagine per approfondire</span>
                 </div>
                 <button class="vote-button" onclick="voteAnimal('{{animali[1]}}')">vota</button>
-               
-               
-               
-                </a>
-       
-        </div>
+                <span class="vote-count" id="{{animali[1]}}-count">0</span>
+            </div>
            
            <p>
             Classifica: {{animali[0]}}
@@ -118,13 +110,14 @@
 
 
     </div>
+    
     <script>
         function voteAnimal(animalName) {
-            // Esegui qui le operazioni per registrare il voto dell'animale
-            console.log("Hai votato per: " + animalName);
+            var countElement = document.getElementById(animalName + '-count');
+            var count = parseInt(countElement.innerHTML);
+            countElement.innerHTML = count + 1;
         }
     </script>
-
 
 
 </body>
