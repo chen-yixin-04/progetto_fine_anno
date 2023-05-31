@@ -59,9 +59,12 @@ for i,row in Animali_data.iterrows():
     # the connection is not auto committed by default, so we must commit to save our changes
     mydb.commit()
 
-#Check if the table has been filled
 mycursor.execute("SELECT * FROM CLASSIFICA_ANIMALI_ZOO.Animali")
 myresult = mycursor.fetchall()
 
+
+
 for x in myresult:
   print(x)
+
+
