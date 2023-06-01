@@ -13,35 +13,30 @@
 
 
 <body>
-    <div class="zoo">
+    <div class="zoo-container">
         <header>
-            <h1>15 animali più poplari dello zoo </h1>
+            <h1>15 animali più popolari dello zoo</h1>
         </header>
-
-
-        <img src="../static/immagini/zoo.jpg" alt="zoo" width="500">
+        <img class="zoo-image" src="../static/immagini/zoo.jpg" alt="zoo" width="500">
+        
+        <ol class="animal-list">
+            <li class="aquatic"><a href="../static/animali/Pinguino.html">Pinguino</a></li>
+            <li class="domestic"><a href="../static/animali/Giraffa.html">Giraffa</a></li>
+            <li class="domestic"><a href="../static/animali/Capra.html">Capra</a></li>
+            <li class="predator"><a href="../static/animali/Orso polare.html">Orso polare</a></li>
+            <li class="domestic"><a href="../static/animali/Leone.html">Leone</a></li>
+            <li class="predator"><a href="../static/animali/Tigre.html">Tigre</a></li>
+            <li class="predator"><a href="../static/animali/Panda rosso.html">Panda rosso</a></li>
+            <li class="toothed"><a href="../static/animali/Elefante.html">Elefante</a></li>
+            <li class="aquatic"><a href="../static/animali/Gorilla.html">Gorilla</a></li>
+            <li class="predator"><a href="../static/animali/Panda.html">Panda</a></li>
+            <li class="domestic"><a href="../static/animali/Alligatore.html">Alligatore</a></li>
+            <li class="aquatic"><a href="../static/animali/Ghepardo.html">Ghepardo</a></li>
+            <li class="predator"><a href="../static/animali/Delfino.html">Delfino</a></li>
+            <li class="airborne"><a href="../static/animali/Fenicottero.html">Fenicottero</a></li>
+            <li class="aquatic"><a href="../static/animali/Lontra.html">Lontra</a></li>
+        </ol>
     </div>
-
-
-    <ol >
-        <li class="aquatic"><a href="../static/animali/Pinguino.html">Pinguino</a></li>
-        <li class="domestic"><a href="../static/animali/Giraffa.html">Giraffa</a></li>
-        <li class="domestic"><a href="../static/animali/Capra.html">Capra</a></li>
-        <li class="predator"><a href="../static/animali/Orso polare.html">Orso polare</a></li>
-        <li class="domestic"><a href="../static/animali/Leone.html">Leone</a></li>
-        <li class="predator"><a href="../static/animali/Tigre.html">Tigre</a></li>
-        <li class="predator"><a href="../static/animali/Panda rosso.html">Panda rosso</a></li>
-        <li class="toothed"><a href="../static/animali/Elefante.html">Elefante</a></li>
-        <li class="aquatic"><a href="../static/animali/Gorilla.html">Gorilla</a></li>
-        <li class="predator"><a href="../static/animali/Panda.html">Panda</a></li>
-        <li class="domestic"><a href="../static/animali/Alligatore.html">Alligatore</a></li>
-        <li class="aquatic"><a href="../static/animali/Ghepardo.html">Ghepardo</a></li>
-        <li class="predator"><a href="../static/animali/Delfino.html">Delfino</a></li>
-        <li class="airborne"><a href="../static/animali/Fenicottero.html">Fenicottero</a></li>
-        <li class="aquatic"><a href="../static/animali/Lontra.html">Lontra</a></li>
-    </ol>
-
-
     <hr>
        
 
@@ -52,15 +47,13 @@
             <div>
                 <div class="tooltip">
                     <a href="../static/animali/{{animali[1]}}.html">
-                        <img src="../static/immagini/{{animali[0]}}.jpg" alt="{{animali[0]}}" width="500"></a>
-                </div>
-                <div>
-                <span class="tooltiptext">Clicca sull'immagine per approfondire</span>
+                        <img src="../static/immagini/{{animali[0]}}.jpg" alt="{{animali[0]}}" width="500">
+                        <span class="tooltiptext">Clicca sull'immagine per approfondire</span>
+                    </a>
                 </div>
                 <button class="vote-button" onclick="voteAnimal('{{animali[1]}}')">vota</button>
                 <span class="vote-count" id="{{animali[1]}}-count">0</span>
             </div>
-           
            <p>
             Classifica: {{animali[0]}}
            </p>
@@ -102,12 +95,7 @@
 
             </p>
 
-            <p class="descrizione">
-                descrizione: {{animali[19]}}
-
-
-            </p>
-
+           
         </div>
 
 
