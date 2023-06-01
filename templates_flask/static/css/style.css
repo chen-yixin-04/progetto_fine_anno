@@ -26,6 +26,7 @@ title {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
+    
 }
 
 .riquadri {
@@ -34,6 +35,7 @@ title {
    margin: 10px;
    background-color: black;
    border-radius: 10%;
+   border-color: red;
 
 }
   
@@ -158,3 +160,9 @@ body {
 
 
 
+.testo-limitato {
+  width: 400px; 
+  text-align: center;
+  word-wrap: break-word;
+  margin-left: 80px; 
+}

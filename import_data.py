@@ -19,7 +19,7 @@ mycursor.execute("""
   CREATE TABLE IF NOT EXISTS CLASSIFICA_ANIMALI_ZOO.Animali (
     id integer, 
     animal_name VARCHAR(30) NOT NULL,
-    hair VARCHAR(30) ,
+    hair VARCHAR(30),
     feathers VARCHAR(30),
     eggs VARCHAR(30),
     milk VARCHAR(30),
@@ -35,7 +35,9 @@ mycursor.execute("""
     tail VARCHAR(30),
     domestic VARCHAR(30),
     catsize VARCHAR(30),
-    class_type VARCHAR(30)
+    class_type VARCHAR(30),
+    Curiosita TEXT
+
     
   );""")
 
@@ -53,7 +55,7 @@ print(Animali_data.head(20))
 for i,row in Animali_data.iterrows():
     cursor = mydb.cursor()
     #here %S means string values 
-    sql = "INSERT INTO CLASSIFICA_ANIMALI_ZOO.Animali VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+    sql = "INSERT INTO CLASSIFICA_ANIMALI_ZOO.Animali VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
     cursor.execute(sql, tuple(row))
     print("Record inserted")
     # the connection is not auto committed by default, so we must commit to save our changes

@@ -1,16 +1,16 @@
-id,animal_name,hair,feathers,eggs,milk,airborne,aquatic,predator,toothed,backbone,breathes,venomous,fins,legs,tail,domestic,catsize,class_type
-1,Pinguino,vero,vero,vero,falso,falso,vero,vero,falso,vero,vero,falso,falso,2,vero,falso,vero,uccello
-2,Giraffa,vero,falso,falso,vero,falso,falso,falso,vero,vero,vero,falso,falso,4,vero,falso,vero,mammifero
-3,Capra,vero,falso,falso,vero,falso,falso,falso,vero,vero,vero,falso,falso,4,vero,falso,falso,mammifero
-4,Orso polare,vero,falso,falso,vero,falso,falso,vero,vero,vero,vero,falso,falso,4,falso,vero,vero,mammifero
-5,Leone,vero,falso,falso,vero,falso,falso,vero,vero,vero,vero,falso,falso,4,vero,vero,vero,mammifero
-6,Tigre,vero,falso,falso,vero,falso,falso,vero,vero,vero,vero,falso,falso,4,vero,vero,vero,mammifero
-7,Panda rosso,vero,falso,falso,vero,falso,falso,falso,vero,vero,vero,falso,falso,4,vero,falso,falso,mammifero
-8,Elefante,vero,falso,falso,vero,falso,falso,falso,vero,vero,vero,falso,falso,4,vero,vero,vero,mammifero
-9,Gorilla,vero,falso,falso,vero,falso,falso,falso,vero,vero,vero,falso,falso,2,falso,falso,vero,mammifero
-10,Panda,vero,falso,falso,vero,falso,falso,falso,vero,vero,vero,falso,falso,4,vero,falso,falso,mammifero
-11,Alligatore,vero,falso,vero,falso,falso,vero,vero,vero,vero,vero,falso,falso,4,vero,falso,falso,mammifero
-12,Ghepardo,vero,falso,falso,vero,falso,falso,vero,vero,vero,vero,falso,falso,4,vero,vero,vero,mammifero
-13,Delfino,vero,falso,falso,vero,falso,vero,vero,vero,vero,vero,falso,vero,0,vero,falso,vero,mammifero
-14,Fenicottero,falso,vero,vero,falso,vero,falso,falso,falso,vero,vero,falso,falso,2,vero,falso,vero,uccello
-15,Lontra,vero,falso,falso,vero,falso,vero,vero,vero,vero,vero,falso,falso,4,vero,falso,vero,mammifero
+id,animal_name,hair,feathers,eggs,milk,airborne,aquatic,predator,toothed,backbone,breathes,venomous,fins,legs,tail,domestic,catsize,class_type,curiosita
+1,Pinguino,vero,vero,vero,falso,falso,vero,vero,falso,vero,vero,falso,falso,2,vero,falso,vero,uccello,
+2,Giraffa,vero,falso,falso,vero,falso,falso,falso,vero,vero,vero,falso,falso,4,vero,falso,vero,mammifero,
+3,Capra,vero,falso,falso,vero,falso,falso,falso,vero,vero,vero,falso,falso,4,vero,falso,falso,mammifero,
+4,Orso polare,vero,falso,falso,vero,falso,falso,vero,vero,vero,vero,falso,falso,4,falso,vero,vero,mammifero,
+5,Leone,vero,falso,falso,vero,falso,falso,vero,vero,vero,vero,falso,falso,4,vero,vero,vero,mammifero,
+6,Tigre,vero,falso,falso,vero,falso,falso,vero,vero,vero,vero,falso,falso,4,vero,vero,vero,mammifero,
+7,Panda rosso,vero,falso,falso,vero,falso,falso,falso,vero,vero,vero,falso,falso,4,vero,falso,falso,mammifero,
+8,Elefante,vero,falso,falso,vero,falso,falso,falso,vero,vero,vero,falso,falso,4,vero,vero,vero,mammifero,
+9,Gorilla,vero,falso,falso,vero,falso,falso,falso,vero,vero,vero,falso,falso,2,falso,falso,vero,mammifero,
+10,Panda,vero,falso,falso,vero,falso,falso,falso,vero,vero,vero,falso,falso,4,vero,falso,falso,mammifero,
+11,Alligatore,vero,falso,vero,falso,falso,vero,vero,vero,vero,vero,falso,falso,4,vero,falso,falso,mammifero,
+12,Ghepardo,vero,falso,falso,vero,falso,falso,vero,vero,vero,vero,falso,falso,4,vero,vero,vero,mammifero,
+13,Delfino,vero,falso,falso,vero,falso,vero,vero,vero,vero,vero,falso,vero,0,vero,falso,vero,mammifero,
+14,Fenicottero,falso,vero,vero,falso,vero,falso,falso,falso,vero,vero,falso,falso,2,vero,falso,vero,uccello,
+15,Lontra,vero,falso,falso,vero,falso,vero,vero,vero,vero,vero,falso,falso,4,vero,falso,vero,mammifero,
