@@ -1,74 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Descrizione degli alligatori</title>
-   
-  
+  <title>Descrizione degli alligatori</title>
+  <link rel="stylesheet" href="../css/style2.css" />
+  <script src="../JavaScript/script.js"></script>
 </head>
 <body>
-    <h1>Gli Alligatori</h1>
+  <h1>Gli Alligatori</h1>
     <p>Gli alligatoridi sono una famiglia di rettili appartenente all'ordine Crocodylia, noti come alligatori e caimani, attualmente rappresentati da varie specie viventi nelle Americhe e una specie presente in Cina. Il nome deriva dallo spagnolo el lagarto (= la lucertola), attraverso l'inglese alligator.</p>
-    <style>
-        body {
-          font-family: Arial, sans-serif;
-          margin: 20px;
-        }
-        
-        h1 {
-          color: #336699;
-          text-align: center;
-        }
-        
-        .gallery {
-          width: 100%;
-          overflow-x: scroll;
-          white-space: nowrap;
-        }
-        
-        .gallery img {
-          display: inline-block;
-          width: 600px;
-          height: 400px;
-          margin-right: 10px;
-        }
-        p {
-      padding-left: 50px;
-      padding-right: 50px;
-      line-height: 2;
-    }
-    img {
-      border: 1px solid #919191;}
-      </style>
-    </head>
-    <body>
-      
-      
+
+  <div class="gallery-container">
+    <div class="scroll-arrow left hidden" onclick="scrollGallery('left')">&#8592;</div>
+    
       <div class="gallery">
         <img src="https://media.istockphoto.com/id/1171368832/it/foto/alligatore-americano-che-nuota-nella-palude-primaverile.jpg?s=612x612&w=0&k=20&c=9YAybh6OGtKlRL__3ZDDtdouNITl3iLDUvoEnSMSM3o="  width="600" height="400">
         <img src="https://media.istockphoto.com/id/1364143603/it/foto/alligatore.jpg?s=170667a&w=0&k=20&c=50ffW4yIaSIRlBt_lrc3lc8FOL1TNcr2l1QDm1tkDHY=" width="600">
         <img src="https://c8.alamy.com/compit/ex6rt5/confronto-di-alligatori-e-coccodrilli-ex6rt5.jpg"  width="600" height="400"> 
         <img src="https://www.greenme.it/wp-content/uploads/2021/08/alligatore-azzanna-addestratrice.jpg" width="600" height="400">
         <img src="https://staticfanpage.akamaized.net/wp-content/uploads/sites/5/2019/07/alligatorialbini-1200x675.jpg"width="600" height="400">
-      </div>
       
-      <script>
-        function scrollGallery() {
-          var gallery = document.querySelector('.gallery');
-          gallery.scrollLeft += 620; // Width of each image plus margin-right
-        }
-      </script>
-      
-      <button onclick="scrollGallery()">Scorri</button>
-      <div class="testo">
-      <p>Gli alligatori differiscono dai coccodrilli soprattutto per la testa, più larga e corta, con un muso più ottuso; in questo gruppo, il quarto grande dente sulla mandibola viene riposto in una fossa formata nella mascella superiore appositamente per accoglierlo. Altre caratteristiche riguardano le zampe, meno palmate che nei coccodrilli, e una particolare intolleranza alla salinità: i coccodrilli infatti possono sopportare meglio l'acqua di mare grazie a ghiandole specializzate per il filtraggio del sale.
-        </p>
-    
-    </body>
-    
-   
-    
-    
-    
-    
+    </div>
+    <div class="scroll-arrow right" onclick="scrollGallery('right')">&#8594;</div>
+  </div>
+
+  <p>Gli alligatori differiscono dai coccodrilli soprattutto per la testa, più larga e corta, con un muso più ottuso; in questo gruppo, il quarto grande dente sulla mandibola viene riposto in una fossa formata nella mascella superiore appositamente per accoglierlo. Altre caratteristiche riguardano le zampe, meno palmate che nei coccodrilli, e una particolare intolleranza alla salinità: i coccodrilli infatti possono sopportare meglio l'acqua di mare grazie a ghiandole specializzate per il filtraggio del sale.
+  </p>
+  
 </body>
 </html>

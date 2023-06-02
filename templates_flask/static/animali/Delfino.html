@@ -2,43 +2,15 @@
 <html lang="en">
 <head>
     <title>Descrizione dei delfini</title>
-    <style>
-        body {
-          font-family: Arial, sans-serif;
-          margin: 20px;
-        }
-        
-        h1 {
-          color: #336699;
-          text-align: center;
-        }
-        
-        .gallery {
-          width: 100%;
-          overflow-x: scroll;
-          white-space: nowrap;
-        }
-        
-        .gallery img {
-          display: inline-block;
-          width: 600px;
-          height: 400px;
-          margin-right: 10px;
-        }
-        p {
-          padding-left: 50px;
-          padding-right: 50px;
-          line-height: 2;
-        }
-        img {
-          border: 1px solid #919191;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/style2.css" />
+  <script src="../JavaScript/script.js"></script>
 </head>
 <body>
     <h1>I Delfini</h1>
     <p>I delfini sono mammiferi marini appartenenti alla famiglia Delphinidae. Sono noti per la loro intelligenza, agilità e il caratteristico muso lungo e appuntito. I delfini sono ampiamente distribuiti in tutti gli oceani del mondo e sono noti per la loro comunicazione complessa, i loro comportamenti giocosi e la loro capacità di nuotare rapidamente e saltare fuori dall'acqua. Sono animali sociali che vivono in gruppi chiamati "branchi" o "sciami".</p>
-  
+    
+    <div class="gallery-container">
+    <div class="scroll-arrow left hidden" onclick="scrollGallery('left')">&#8592;</div>
     <div class="gallery">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Flight_-_Flickr_-_joshDubya.jpg/1200px-Flight_-_Flickr_-_joshDubya.jpg" width="600" height="400">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Grampus_griseus_by_OpenCage.jpg/260px-Grampus_griseus_by_OpenCage.jpg" width="600" height="400">
@@ -46,15 +18,10 @@
       <img src="https://static.sevendaysweb.com/1271/2015/10/13/69565/delfini.scale-to-max-width.825x.jpg" width="600" height="400">
       <img src="https://www.focus.it/site_stored/imgs/0005/024/shutterstock_500829625.1020x680.jpg" width="600" height="400">
     </div>
+    <div class="scroll-arrow right" onclick="scrollGallery('right')">&#8594;</div>
+    </div>
   
-    <script>
-      function scrollGallery() {
-        var gallery = document.querySelector('.gallery');
-        gallery.scrollLeft += 620; // Width of each image plus margin-right
-      }
-    </script>
-  
-    <button onclick="scrollGallery()">Scorri</button>
+   
     <p> Le dimensioni dei delfini variano dal delfino di Maui lungo 1,7 metri (5 piedi 7 pollici) e 50 chilogrammi (110 libbre) all'orca di 9,5 m (31 piedi 2 pollici) e 10 tonnellate (11 tonnellate corte) . Varie specie di delfini mostrano dimorfismo sessuale in cui i maschi sono più grandi delle femmine. Hanno corpi aerodinamici e due arti modificati in pinne. Sebbene non siano flessibili come le foche, alcuni delfini possono viaggiare brevemente a una velocità di 29 chilometri (18 miglia) all'ora o saltare di circa 30 piedi (9,1 m).
 
         I delfini usano i loro denti conici per catturare prede in rapido movimento. Hanno un udito ben sviluppato che è adatto sia per l'aria che per l'acqua. È così ben sviluppato che alcuni possono sopravvivere anche se sono ciechi. Alcune specie sono ben adattate per le immersioni a grandi profondità. Hanno uno strato di grasso, o grasso, sotto la pelle per riscaldarsi nell'acqua fredda.
