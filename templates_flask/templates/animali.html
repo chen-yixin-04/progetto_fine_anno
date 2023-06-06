@@ -4,9 +4,15 @@
 
 <head>
     <title>Classifica degli animali dello zoo</title>
-   
     <link rel="stylesheet" href="../static/css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        document.getElementById('link-home').addEventListener('click', function(event) {
+          event.preventDefault(); // Prevents the default link behavior
+          location.reload(); // Reload the page
+        });
+      </script>
+      
    
 </head>
 
@@ -16,7 +22,7 @@
         <header>
             <h1>15 animali più popolari dello zoo</h1>
         </header>
-        
+        <nav>
         <div class="menu_discesa">
             <button class="scritta_menu">classifica animali</button>
             <div class="menu_discesa-content">
@@ -40,14 +46,11 @@
             </div>
         </div>
         <div class="topnav">
-            <a class="active" >Home</a>
-            <a href="#news">News</a>
-            <a href="#contact">Contact</a>
-            <div class="topnav-right">
-              <a href="#search">Search</a>
-              <a href="#about">About</a>
+            
+            <a class="active" href="../templates/animali.html">Home</a>
+            
             </div>
-          </div>
+          </div></nav>
         
         
     </div>
@@ -123,13 +126,7 @@
 
     </div>
     
-    <script>
-        function voteAnimal(animalName) {
-            var countElement = document.getElementById(animalName + '-count');
-            var count = parseInt(countElement.innerHTML);
-            countElement.innerHTML = count + 1;
-        }
-    </script>
+    
 
 
 </body>
