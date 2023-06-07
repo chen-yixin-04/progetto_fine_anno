@@ -11,6 +11,12 @@
           event.preventDefault(); // Prevents the default link behavior
           location.reload(); // Reload the page
         });
+
+
+        function voteAnimal(id)
+        {
+            document.getElementById(id+"-count").innerHTML =  parseInt(document.getElementById(id+"-count").innerHTML) +1;
+        }
       </script>
       
    
@@ -47,7 +53,7 @@
         </div>
         <div class="topnav">
             
-            <a class="active" href="../templates/animali.html">Home</a>
+            <a class="active" href="/">Home</a>
             
             </div>
           </div></nav>
